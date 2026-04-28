@@ -1,8 +1,8 @@
 V=[440,4.5,2.5,0.04,0.25] # Vecteur d'état au temps initial
 V_t=[] #Evolution du vecteur d'état
 V_t.append(V)
-pas=
-temps=
+pas=1/12
+temps=40
 
 def kappa_N(V):
     return K_N*V/(V_et+V)
