@@ -1,7 +1,8 @@
 V=[440,4.5,2.5,0.04,0.25] # Vecteur d'état au temps initial
 V_t=[] #Evolution du vecteur d'état
 V_t.append(V)
-
+pas=
+intervalle_temps=[0, ]
 
 
 #Végétation Eq.(F1)
