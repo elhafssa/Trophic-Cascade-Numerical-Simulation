@@ -37,8 +37,8 @@ V⋆⋆=50 #kg.km−2 Demi-saturation pour κD(V )
 cW=D 2.0 #km2.animal−1 .an−1 Coefficient de mise à mort loups-cerfs
 hWD=2.0 #animaux.km−2 Demi-saturation loups-cerfs
 cBD=0.3 #km2.animal−1.an−1 Coefficient de mise à mort ours-cerfs
-hBD=1.5 animaux.km−2 Demi-saturation ours-cerfs
-δD=0.08 an−1 Mortalité de fond des cerfs
+hBD=1.5 #animaux.km−2 Demi-saturation ours-cerfs
+δD=0.08 #an−1 Mortalité de fond des cerfs
 
 
 
