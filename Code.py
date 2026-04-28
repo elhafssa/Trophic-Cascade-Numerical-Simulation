@@ -4,6 +4,13 @@ V_t.append(V)
 pas=
 intervalle_temps=[0, ]
 
+def f(t,u):
+  u[0]=rV*V*(1-V/KV)-
+  u[1]=
+  u[2]=
+  u[3]=
+  u[4]=
+  
 
 #Végétation Eq.(F1)
 rV=1.20 #an−1 Taux de croissance intrinsèque de la végétation
