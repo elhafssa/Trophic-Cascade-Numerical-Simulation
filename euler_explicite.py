@@ -1,4 +1,5 @@
-from Code.py import f, pas, temps, V
+from f.py import f
+from constante.py import pas, temps
 import numpy as np
 
 def euler_explicite(f_init):
