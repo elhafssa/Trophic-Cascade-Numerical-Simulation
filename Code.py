@@ -58,13 +58,6 @@ m_B=0.08 #an−1 Mortalité naturelle des ours
 
 
 
-
-
-
-
-
-
-
 def kappa_N(V):
     return K_N*V/(V_et+V)
 def Kappa_V(V):
