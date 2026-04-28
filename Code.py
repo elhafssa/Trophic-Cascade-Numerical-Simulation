@@ -4,6 +4,11 @@ V_t.append(V)
 pas=
 temps=
 
+def kappa_N(V):
+    return K_N*V/(V_et+V)
+def Kappa_V(V):
+    return K_D*V/(V_etet+V)
+
 def f(t, u):
     V, N, D, W, B = u
     dV = (r_V * V * (1 - V / K_V)
@@ -34,7 +39,7 @@ def f(t, u):
 
 #Végétation Eq.(F1)
 r_V=1.20 #an−1 Taux de croissance intrinsèque de la végétation
-KV=500 #kg.km−2 Capacité de charge de la végétation
+K_V=500 #kg.km−2 Capacité de charge de la végétation
 alpha_N=15.0 #kg.an−1.animal−1 Intensité de pâturage des wapitis/orignaux
 nu_N=200 #kg.km−2 Demi-saturation, pâturage des wapitis/orignaux sur V
 alpha_D=8.0 #kg.an−1.animal−1 Intensité de pâturage des cerfs
@@ -46,8 +51,8 @@ nu_B=120 #kg km−2 Demi-saturation, pâturage des ours sur V
 
 #Ongulé principal (wapiti/orignal) Eq.(F2)
 r_N=0.30 #an−1 Taux de croissance intrinsèque
-KN=7.0 #animaux.km−2 Capacité de charge maximale
-V⋆=70 #kg.km−2 Demi-saturation pour κ(V )
+K_N=7.0 #animaux.km−2 Capacité de charge maximale
+V_et=70 #kg.km−2 Demi-saturation pour κ(V )
 theta_N=4.0 #Exposant theta-logistique
 c_WN=7.5 #km2.animal−1.an−1 Coefficient de mise à mort loup–wapiti/orignaux
 beta=0.5 #Paramètre de dépendance au ratio
@@ -59,9 +64,9 @@ delta_N=0.05 #an−1 Mortalité de fond des wapiti/orignaux
 
 #Ongulé secondaire (cerf) Eq.(F3)
 r_D=0.50 #an−1 Taux de croissance intrinsèque
-KD=4.0 #animaux.km−2 Capacité de charge des cerfs
-V⋆⋆=50 #kg.km−2 Demi-saturation pour κD(V )
-θD=2.0 #Exposant theta-logistique
+K_D=4.0 #animaux.km−2 Capacité de charge des cerfs
+V_etet=50 #kg.km−2 Demi-saturation pour κD(V )
+theta_D=2.0 #Exposant theta-logistique
 c_W=D 2.0 #km2.animal−1 .an−1 Coefficient de mise à mort loups-cerfs
 h_WD=2.0 #animaux.km−2 Demi-saturation loups-cerfs
 c_BD=0.3 #km2.animal−1.an−1 Coefficient de mise à mort ours-cerfs
