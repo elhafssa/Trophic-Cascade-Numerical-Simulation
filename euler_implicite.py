@@ -1,4 +1,4 @@
-from Code.py import dt,f
+from constante.py import *
 from newton.py import newton 
 
 def fonction_pour_newton(x):
@@ -14,7 +14,7 @@ def euler_implicite(v,t_final):
   """
   t=0
   while t<t_final:
-    v.append(newton(fonction_pour_newton(v[-1],t))
+    v.append(newton(fonction_pour_newton))
     t=t+dt
   return v
   
