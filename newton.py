@@ -18,7 +18,7 @@ def Jacobian(G, X, Xn, h, params, eps=1e-6):
     return J
 
 
-def Newton_system(X0, Xn, h, params, eps=1e-6, Nmax=50):
+def Newton_system(X0, Xn, h, params,f, eps=1e-6, Nmax=50):
     X = X0.copy()
     
     for k in range(Nmax):
