@@ -37,5 +37,20 @@ V⋆⋆=50 #kg.km−2 Demi-saturation pour κD(V )
 cW=D 2.0 #km2.animal−1 .an−1 Coefficient de mise à mort loups-cerfs
 hWD=2.0 #animaux.km−2 Demi-saturation loups-cerfs
 cBD=0.3 #km2.animal−1.an−1 Coefficient de mise à mort ours-cerfs
-hBD 1.5 animaux.km−2 Demi-saturation ours-cerfs
-δD 0.08 an−1 Mortalité de fond des cerfs
+hBD=1.5 animaux.km−2 Demi-saturation ours-cerfs
+δD=0.08 an−1 Mortalité de fond des cerfs
+
+
+
+#Loups Eq.(F4)
+ε1=0.25 #Coefficient de pente logarithmique de la réponse numérique
+ε2=0.5 #Décalage de base de la réponse numérique
+η=0.01 #an−1 Décalage de régularisation logarithmique
+mW=0.15 #an−1 Mortalité naturelle des loups
+µW=0.10 #an−1 Amplitude maximale du prélèvement saisonnier par l’homme
+
+
+#Ours Eq.(F5)
+eB=0.12 #Gain énergétique des ours à partir des proies
+eV=0.02 #an−1 Gain énergétique des ours à partir de la végétation
+mB=0.08 #an−1 Mortalité naturelle des ours
