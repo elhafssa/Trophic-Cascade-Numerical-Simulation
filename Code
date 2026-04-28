@@ -1,1 +1,2 @@
-Voici le doc qu'on va utiliser
+V=[440,4.5,2.5,0.040,0.25] # Vecteur d'état au temps initial
+V_t=[]
