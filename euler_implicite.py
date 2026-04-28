@@ -1,5 +1,5 @@
 from constante.py import *
-from newton.py import newton 
+from newton.py import *
 
 def fonction_pour_newton(x):
   """
