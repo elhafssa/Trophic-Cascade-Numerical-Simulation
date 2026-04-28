@@ -1,4 +1,4 @@
-from Code.py import f,dt,temps
+from constante.py import *
 
 def runge_kutta_4(v):
   """
