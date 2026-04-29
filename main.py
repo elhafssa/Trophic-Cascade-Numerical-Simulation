@@ -6,16 +6,19 @@ from constante import *
 import numpy as np
 
 sol_el_expli=np.array(euler_explicite(V))
-print(sol_el_expli)
+"""
 sol_el_impli=np.array(euler_implicite(V))
 sol_RK4=np.array(runge_kutta_4(V))
 intervalle=np.linspace(0,temps,temps/pas)
-
-vegetation_el_expli=sol_el_expli[:,0]
+"""
+vegetation_el_expli=sol_el_expli[:,4]
+"""
 vegetation_el_impli=sol_el_impli[:,0]
 vegetation_RK4=runge_kutta_4[:,0]
+"""
 plt.subplot(3,2,1)
 plt.plot(intervalle,vegetation_el_expli)
+"""
 plt.plot(intervalle,vegetation_el_impli)
 plt.plot(intervalle,vegetation_RK4)
 
@@ -50,4 +53,5 @@ plt.subplot(3,2,5)
 plt.plot(intervalle,ours_el_expli)
 plt.plot(intervalle,ours_el_impli)
 plt.plot(intervalle,ours_RK4)
+"""
 plt.show()
