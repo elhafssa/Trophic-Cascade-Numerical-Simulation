@@ -1,8 +1,8 @@
 import numpy as np
 
 V=[440,4.5,2.5,0.04,0.25] # Vecteur d'état au temps initial
-pas=1/365.25
-temps=300
+pas=1/365
+temps=71.0
 intervalle=np.arange(0.,temps,pas)
 
 

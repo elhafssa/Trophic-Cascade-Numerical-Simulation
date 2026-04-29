@@ -14,8 +14,8 @@ def euler_implicite(v):
   """
   t=0
   while t<temps:
-    v.append(newton(fonction_pour_newton))
+    v.append(newton(v[-2],fonction_pour_newton))
     t=t+dt
   return v
   
-  
+  #newton(X0, Xn, h,F, eps=1e-6, Nmax=50)

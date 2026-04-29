@@ -8,6 +8,6 @@ def euler_explicite(f_init):
   """
   nb_points=int(temps/pas)
   res=[f_init]
-  for i in range(nb_points-1):
+  for i in range(nb_points):
     res.append(np.add(res[i],np.multiply(pas,f(pas*i,res[i]))))
-  return res
+  return res[:-1]
