@@ -1,12 +1,14 @@
-from constante.py import *
+from constante import *
+import numpy as np
 
 def kappa_N(V):
     return K_N*V/(V_et+V)
-def Kappa_V(V):
+def kappa_D(V):
     return K_D*V/(V_etet+V)
 
 def f(t, u):
     V, N, D, W, B = u
+    Phi_W=(c_WN*N)/(W+beta*N)+(c_WN*D)/(h_WD+D)
     dV = (r_V * V * (1 - V / K_V)
           - (alpha_N * V * N) / (nu_N + V)
           - (alpha_D * V * D) / (nu_D + V)

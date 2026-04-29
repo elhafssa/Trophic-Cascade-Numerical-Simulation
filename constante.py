@@ -53,3 +53,4 @@ mu_W=0.10 #an−1 Amplitude maximale du prélèvement saisonnier par l’homme
 e_B=0.12 #Gain énergétique des ours à partir des proies
 e_V=0.02 #an−1 Gain énergétique des ours à partir de la végétation
 m_B=0.08 #an−1 Mortalité naturelle des ours
+

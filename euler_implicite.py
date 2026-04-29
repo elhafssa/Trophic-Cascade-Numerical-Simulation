@@ -1,5 +1,5 @@
-from constante.py import *
-from newton.py import *
+from constante import *
+from newton import *
 
 def fonction_pour_newton(x):
   """
@@ -7,13 +7,13 @@ def fonction_pour_newton(x):
   """
   return x-v[-1]-dt*f(x,t+dt)
 
-def euler_implicite(v,t_final):
+def euler_implicite(v):
   """
   Résous un problème de Cauchy via la méthode d'euler implicite
   v : vecteur d'état au temps initial
   """
   t=0
-  while t<t_final:
+  while t<temps:
     v.append(newton(fonction_pour_newton))
     t=t+dt
   return v

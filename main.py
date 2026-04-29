@@ -3,9 +3,11 @@ from euler_explicite import euler_explicite
 from euler_implicite import euler_implicite
 from runge_kutta import runge_kutta_4
 from constante import *
+import numpy as np
 
-sol_el_expli=np.array(euleur_explicite(V))
-sol_el_impli=np.array(euleur_implicite(V))
+sol_el_expli=np.array(euler_explicite(V))
+print(sol_el_expli)
+sol_el_impli=np.array(euler_implicite(V))
 sol_RK4=np.array(runge_kutta_4(V))
 intervalle=np.linspace(0,temps,temps/pas)
 
