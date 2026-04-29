@@ -8,7 +8,7 @@ def kappa_D(V):
 
 def f(t, u):
     V, N, D, W, B = u
-    Phi_W=(c_WN*N)/(W+beta*N)+(c_WN*D)/(h_WD+D)
+    Phi_W=(c_WN*N)/(W+beta*N)+(c_WD*D)/(h_WD+D)
     dV = (r_V * V * (1 - V / K_V)
           - (alpha_N * V * N) / (nu_N + V)
           - (alpha_D * V * D) / (nu_D + V)
