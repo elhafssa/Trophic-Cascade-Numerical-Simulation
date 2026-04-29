@@ -30,9 +30,4 @@ def Newton_system(X0, Xn, h, params, eps=1e-6, Nmax=50):
     
     return X
         
-        J = Jacobian(F, X, Xn)
-        
-        delta = np.linalg.solve(J, GX)
-        Xn,X = X - delta,Xn
-    
-    return Xn
+       
