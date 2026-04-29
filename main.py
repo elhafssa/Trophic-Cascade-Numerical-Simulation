@@ -57,6 +57,5 @@ plt.ylabel("Ours(nombre d'individu/km**2)")
 plt.plot(intervalle,ours_el_expli, label="Euler implicite")
 #plt.plot(intervalle,ours_el_impli, label="Euler explicite")
 plt.plot(intervalle,ours_RK4, label="Runge_Kutta")
-"""
 plt.legend()
 plt.show()
