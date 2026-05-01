@@ -1,7 +1,7 @@
 import numpy as np
 from constante import *
 
-def Jacobian(G, X, Xn, h, params, eps=1e-6):
+def Jacobian(F, X, eps=1e-6):
     n = len(X)
     J = np.zeros((n, n))
     
@@ -9,23 +9,27 @@ def Jacobian(G, X, Xn, h, params, eps=1e-6):
         X1 = X.copy()
         X1[i] += eps
         
-        J[:, i] = (G(X1, Xn, h, params) - G(X, Xn, h, params)) / eps
+        J[:, i] = (F(X1, Xn, h, params) - F(X, Xn, h, params)) / eps
     
     return J
 
 
-def Newton_system(X0, Xn, h, params, eps=1e-6, Nmax=50):
+def newton(F,X0,v, eps=1e-6, Nmax=50):
     X = X0.copy()
-    
+    G = F(X,v[-1])
+    J = Jacobian(F, X)
+    delta = np.linalg.solve(J, G)
+    Xn=X - delta
     for k in range(Nmax):
-        GX = G(X, Xn, h, params)
+
+        G = F(X, Xn, h, params)
         
-        if np.linalg.norm(GX) < eps:
+        if np.linalg.norm(G) < eps:
             return X
         
-        J = Jacobian(G, X, Xn, h, params)
+        J = Jacobian(F, X)
         
-        delta = np.linalg.solve(J, GX)
+        delta = np.linalg.solve(J, G)
         X = X - delta
     
     return X
