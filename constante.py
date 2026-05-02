@@ -1,6 +1,8 @@
 import numpy as np
 
-V=[440,4.5,2.5,0.04,0.25] # Vecteur d'état au temps initial
+V=np.array([440,4.5,2.5,0.04,0.25]) # Vecteur d'état au temps initial
+# Scénario Yellowstone (sans loups au départ)
+V_yellowstone = np.array([440.0, 4.5, 2.5, 0.0, 0.25])
 pas=0.5
 temps=100
 intervalle=np.arange(0.,temps,pas)
