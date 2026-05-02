@@ -5,62 +5,22 @@ from runge_kutta import runge_kutta_4
 from constante import *
 import numpy as np
 
-sol_el_expli=np.array(euler_explicite(V))
-sol_el_impli=np.array(euler_implicite(V))
-sol_RK4=np.array(runge_kutta_4(V))
-vegetation_el_expli=sol_el_expli[:,0]
-vegetation_el_impli=sol_el_impli[:,0]
-vegetation_RK4=sol_RK4[:,0]
-plt.subplot(3,2,1)
-plt.xlabel("Temps en années")
-plt.ylabel("Végétation(kg/km**2)")
-plt.plot(intervalle,vegetation_el_expli,label="Euler explicite")
-plt.plot(intervalle,vegetation_el_impli)
-plt.plot(intervalle,vegetation_RK4,label="Runge_Kutta")
-plt.legend()
+sol_el_expli = np.array(euler_explicite(V))
+sol_el_impli = np.array(euler_implicite(V))
+sol_RK4      = np.array(runge_kutta_4(V))
 
-ongules_el_expli=sol_el_expli[:,1]
-#ongules_el_impli=sol_el_impli[:,1]
-ongules_RK4=sol_RK4[:,1]
-plt.subplot(3,2,2)
-plt.xlabel("Temps en années")
-plt.ylabel("Wapitis(nombre d'individus/km**2)")
-plt.plot(intervalle,ongules_el_expli, label="Euler explicite")
-#plt.plot(intervalle,ongules_el_impli, label="Euler implicite")
-plt.plot(intervalle,ongules_RK4, label="Runge_Kutta")
-plt.legend()
+titres = ["Végétation (kg/km²)", "Wapitis (ind/km²)", "Cerfs (ind/km²)",
+          "Loups (ind/km²)", "Ours (ind/km²)"]
 
-ongules_sec_el_expli=sol_el_expli[:,2]
-#ongules_sec_el_impli=sol_el_impli[:,2]
-ongules_sec_RK4=sol_RK4[:,2]
-plt.subplot(3,2,3)
-plt.xlabel("Temps en années")
-plt.ylabel("Cerfs(nombre d'individu/km**2)")
-plt.plot(intervalle,ongules_sec_el_expli, label="Euler eplicite")
-#plt.plot(intervalle,ongules_sec_el_impli, label="Euler implicite")
-plt.plot(intervalle,ongules_sec_RK4, label="Runge_Kutta")
-plt.legend()
+for idx in range(5):
+    plt.subplot(3, 2, idx + 1)
+    plt.xlabel("Temps (années)")
+    plt.ylabel(titres[idx])
+    plt.plot(intervalle, sol_el_expli[:, idx], label="Euler explicite", linewidth=2)
+    plt.plot(intervalle, sol_el_impli[:, idx], label="Euler implicite", linewidth=1.5, linestyle="--")
+    plt.plot(intervalle, sol_RK4[:, idx],      label="Runge-Kutta 4",  linewidth=1,   linestyle=":")
+    plt.legend(fontsize=7)
 
-loup_el_expli=sol_el_expli[:,3]
-#loup_el_impli=sol_el_impli[:,3]
-loup_RK4=sol_RK4[:,3]
-plt.subplot(3,2,4)
-plt.xlabel("Temps en années")
-plt.ylabel("Loup(nombre d'individu/km**2)")
-plt.plot(intervalle,loup_el_expli, label="Euler explicite")
-#plt.plot(intervalle,loup_el_impli, label="Euler iplicite")
-plt.plot(intervalle,loup_RK4, label="Runge_Kutta")
-plt.legend()
-
-ours_el_expli=sol_el_expli[:,4]
-#ours_el_impli=sol_el_impli[:,4]
-ours_RK4=sol_RK4[:,4]
-plt.subplot(3,2,5)
-plt.xlabel("Temps en années")
-plt.ylabel("Ours(nombre d'individu/km**2)")
-plt.plot(intervalle,ours_el_expli, label="Euler explicite")
-#plt.plot(intervalle,ours_el_impli, label="Euler implicite")
-plt.plot(intervalle,ours_RK4, label="Runge_Kutta")
-
-plt.legend()
-plt.show()
+plt.tight_layout()
+plt.savefig("resultats.png", dpi=150)
+print("Figure sauvegardée dans resultats.png")
