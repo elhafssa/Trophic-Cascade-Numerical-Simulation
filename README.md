@@ -18,13 +18,12 @@ et non autonomes.
 - **Euler implicite** — Stable, résolu à chaque pas via la méthode de Newton
 - **Runge-Kutta 4** — ordre 4
 
-## Auteurs
-
-Thaddée · Rémi · Hafssa · Malek
-
 ## Prérequis
 
 - `Python`
 - pip install `numpy`
 - pip install `matplotlib`
 
+## Auteurs
+
+Thaddée · Rémi · Hafssa · Malek
