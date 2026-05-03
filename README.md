@@ -21,3 +21,10 @@ et non autonomes.
 ## Auteurs
 
 Thaddée · Rémi · Hafssa · Malek
+
+## Prérequis
+
+- `Python`
+- pip install `numpy`
+- pip install `matplotlib`
+
