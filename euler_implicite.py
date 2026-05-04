@@ -10,8 +10,10 @@ def jacobian(F, X, v_prev, h=1e-8):
     J = np.zeros((n, n))
 
     for i in range(n):
-        X_plus  = X.copy(); X_plus[i]  += h
-        X_minus = X.copy(); X_minus[i] -= h
+        X_plus  = X.copy()
+        X_plus[i]  += h
+        X_minus = X.copy()
+        X_minus[i] -= h
         J[:, i] = (F(X_plus, v_prev) - F(X_minus, v_prev)) / (2 * h)
 
     return J
