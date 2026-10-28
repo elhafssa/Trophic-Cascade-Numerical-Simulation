@@ -1,29 +1,33 @@
-# Cascade Trophique — Simulation Numérique
+# Trophic Cascade — Numerical Simulation
 
-Simulation numérique d'une cascade trophique à 5 compartiments
-(végétation, wapitis/orignaux, cerfs, loups, ours) modélisée par
-un système d'équations différentielles ordinaires non linéaires
-et non autonomes.
+Numerical simulation of a five-compartment trophic cascade (vegetation, elk/moose, deer, wolves, and bears), modeled using a system of nonlinear, non-autonomous ordinary differential equations (ODEs).
 
-## Structure du projet
+## Project Structure
 
-- `constante.py` — Paramètres du modèle
-- `f.py` — Le système d'équations différentielles
-- `euler_explicite/euler_implicite/runge_kutta.py` — Différentes méthodes de résolutions des équations différentielles
-- `main.py` — Simulation et affichage des résultats
+- `constante.py` — Model parameters
+- `f.py` — System of differential equations
+- `euler_explicite.py`, `euler_implicite.py`, `runge_kutta.py` — Different numerical methods for solving differential equations
+- `main.py` — Simulation and visualization of results
 
-## Méthodes numériques implémentées
+## Implemented Numerical Methods
 
-- **Euler explicite** — ordre 1, simple mais conditionnellement stable
-- **Euler implicite** — Stable, résolu à chaque pas via la méthode de Newton
-- **Runge-Kutta 4** — ordre 4
+- **Explicit Euler** — First-order method; simple but conditionally stable.
+- **Implicit Euler** — Stable method, solved at each time step using Newton's method.
+- **Runge–Kutta 4 (RK4)** — Fourth-order method.
 
-## Prérequis
+## Requirements
 
-- `Python`
-- pip install `numpy`
-- pip install `matplotlib`
+- Python
+- NumPy
+- Matplotlib
 
-## Auteurs
+Install the required libraries using pip:
+
+```bash
+pip install numpy matplotlib
+```
+
+## Authors
 
 Thaddée · Rémi · Hafssa · Malek
+
